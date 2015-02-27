@@ -31,7 +31,8 @@ gulp.task('css', function() { 
             .on("error", notify.onError(function (error) {
                  return "Error: " + error.message;
              }))) 
-         .pipe(gulp.dest('./public/css')); 
+         .pipe(gulp.dest('./public/css'))
+        .pipe(notify('Sass compitation finished')); 
 });
 
 // Rerun the task when a file changes
